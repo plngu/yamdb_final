@@ -49,6 +49,7 @@ class ConfirmationCheck(models.Model):
         'Пользователь',
         max_length=150,
     )
+
     confirmation_code = models.CharField(
         'Код подтверждения',
         max_length=1000,
