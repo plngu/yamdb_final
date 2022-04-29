@@ -8,7 +8,6 @@ from rest_framework.decorators import action, api_view, permission_classes
 from rest_framework.pagination import (LimitOffsetPagination,
                                        PageNumberPagination)
 from rest_framework.response import Response
-
 from reviews.models import (Category, ConfirmationCheck, Genre, Review, Title,
                             User)
 
