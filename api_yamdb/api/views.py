@@ -3,21 +3,23 @@ from django.core.mail import send_mail
 from django.db.models import Avg
 from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework import filters, mixins, permissions, status, viewsets
 from rest_framework.decorators import action, api_view, permission_classes
 from rest_framework.pagination import (LimitOffsetPagination,
                                        PageNumberPagination)
 from rest_framework.response import Response
-from rest_framework import status, filters, permissions, viewsets, mixins
 
-from reviews.models import (ConfirmationCheck, User, Review,
-                            Title, Genre, Category)
+from reviews.models import (Category, ConfirmationCheck, Genre, Review, Title,
+                            User)
+
 from .filters import TitleFilter
 from .mixins import CreateUpdateDestroyMixin
 from .permissions import Admin, IsAdminOrReadOnly
-from .serializers import (ConfirmationCheckSerializer, RegUserSerializer,
-                          UserSerializer, ReviewSerializer, CommentSerializer,
-                          GenreSerializer, CategorySerializer,
-                          TitleWriteSerializer, TitleReadSerializer)
+from .serializers import (CategorySerializer, CommentSerializer,
+                          ConfirmationCheckSerializer, GenreSerializer,
+                          RegUserSerializer, ReviewSerializer,
+                          TitleReadSerializer, TitleWriteSerializer,
+                          UserSerializer)
 from .token import get_token_or_code
 
 

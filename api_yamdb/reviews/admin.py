@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import ConfirmationCheck, User, Review, Comment
+from .models import Comment, ConfirmationCheck, Review, User
 
 admin.site.register(ConfirmationCheck)
 

@@ -1,8 +1,8 @@
 from rest_framework import serializers
 from rest_framework.validators import UniqueValidator
 
-from reviews.models import (Title, Review, Comment, User,
-                            ConfirmationCheck, Genre, Category)
+from reviews.models import (Category, Comment, ConfirmationCheck, Genre,
+                            Review, Title, User)
 
 
 def validate_username(value):

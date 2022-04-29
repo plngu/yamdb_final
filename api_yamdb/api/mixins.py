@@ -1,6 +1,6 @@
 from rest_framework import viewsets
 
-from .permissions import ReadOnly, AllOrRead
+from .permissions import AllOrRead, ReadOnly
 
 
 class CreateUpdateDestroyMixin(viewsets.ModelViewSet):

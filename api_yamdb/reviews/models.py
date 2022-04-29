@@ -1,5 +1,5 @@
 from django.contrib.auth.models import AbstractUser
-from django.core.validators import MinValueValidator, MaxValueValidator
+from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 
 from .validators import validate_year
@@ -30,13 +30,11 @@ class User(AbstractUser):
 
     @property
     def admin(self):
-        if self.role == ADMIN:
-            return True
+        return self.role == ADMIN
 
     @property
     def moderator(self):
-        if self.role == MODERATOR:
-            return True
+        return self.role == MODERATOR
 
     class Meta:
         verbose_name = 'Пользователь'
