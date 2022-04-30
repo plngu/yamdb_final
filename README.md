@@ -1,4 +1,4 @@
-![example event parameter](https://github.com/plngu/yamdb_final/actions/workflows/main.yml/badge.svg?event=push)
+![example event parameter](https://github.com/plngu/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg?event=push)
 # api_yamdb
 Проект YaMDb собирает отзывы пользователей на произведения
 
@@ -8,9 +8,12 @@
 - Пользователи могут создавать и редактировать отзывы и оценивать произведения, на основе оценок пользователей рассчитывается средний рейтинг произведения;
 - Аутентификация по JWT-токену.
 
-### Авторы
+Примеры доступных энедпоинтов [ReDoc](https://redocly.github.io/redoc/#operation/addPet):
 
-Евгений Асминин, Алексей Панченко, Александр Шорников
+```
+http://51.250.97.177/admin/
+http://51.250.97.177/redoc/
+```
 
 ### Установка (Windows):
 
@@ -51,8 +54,9 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-Примеры доступных энедпоинтов [ReDoc](https://redocly.github.io/redoc/#operation/addPet):
+Разработчик проекта
+Алексей Панченко
 
-```
-http://127.0.0.1:8000/redoc/
-```
+E-mail: j66k@yandex.ru
+
+Github: https://github.com/plngu/
